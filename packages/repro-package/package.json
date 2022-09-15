@@ -1,0 +1,27 @@
+{
+  "name": "@eskalacja/tmp-repro-dynamic-imports",
+  "version": "2.0.0",
+  "description": "Package made for repro repo of a parcel bug",
+  "main": "dist-cjs/index.js",
+  "jsnext:main": "dist-esm/index.js",
+  "scripts": {
+    "make:icons": "svgr bootstrap-icons-1.9.1/ -d ./src/icons --ext jsx",
+    "make:map": "node scripts/make-map.js",
+    "build:es": "babel --config-file ./babel.config.esm.json src --out-dir dist-esm",
+    "build:cjs": "babel src --out-dir dist-cjs",
+    "build": "yarn build:es && yarn build:cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "browserslist": [
+    "chrome > 100"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@svgr/cli": "^6.3.1"
+  }
+}
