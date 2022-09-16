@@ -1,6 +1,6 @@
 {
   "name": "@eskalacja/tmp-repro-dynamic-imports",
-  "version": "2.0.0",
+  "version": "3.0.1",
   "description": "Package made for repro repo of a parcel bug",
   "main": "dist-cjs/index.js",
   "jsnext:main": "dist-esm/index.js",

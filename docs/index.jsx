@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Component from "./component";
+import Component2 from "./component";
+import ComponentWithUrlScript from "./componentWithUrlScript";
 
 const App = () => {
     return (
         <>
             <h1>Hello world</h1>
-            <h2>Dynamic import</h2>
-            <Component />
+            <Component2 />
+            <ComponentWithUrlScript />
         </>
     )
 };

@@ -36,7 +36,7 @@ const main = () => {
     const jsString = js.join('\n');
 
     writeFileSync(
-        getWriteFileName('index.js'),
+        getWriteFileName('./map.js'),
         jsString,
     );
 };

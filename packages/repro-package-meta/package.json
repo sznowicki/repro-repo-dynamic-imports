@@ -1,15 +1,36 @@
 {
   "name": "@eskalacja/tmp-repro-dynamic-imports-meta",
-  "version": "1.1.0",
+  "version": "3.1.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist-cjs/index.js",
+  "module": "dist-esm/index.js",
+  "jsnext:module": "dist-esm/index.js",
   "scripts": {
+    "build:es": "babel --config-file ./babel.config.esm.json src --out-dir dist-esm",
+    "build:cjs": "babel src --out-dir dist-cjs",
+    "build": "yarn build:es && yarn build:cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "browserslist": [
+    "last 2 versions and > 1%",
+    "not ie > 0",
+    "not op_mini all",
+    "not kaios > 0"
+  ],
   "dependencies": {
-    "@eskalacja/tmp-repro-dynamic-imports": "1.0.0"
+    "@eskalacja/tmp-repro-dynamic-imports": "3.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@svgr/cli": "^6.3.1"
+  },
+  "peerDependencies": {
+    "react": "^18"
   }
 }
